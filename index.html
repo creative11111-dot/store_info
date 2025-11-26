@@ -447,7 +447,7 @@
 
     <!-- Promotional Banner -->
     <div class="promo-banner">
-      🌿 Special Offer: 20% OFF All Products This Week! | Free Consultation Available
+      🌿 Special Offer: 10% OFF All Products on Your Birthday
     </div>
 
     <!-- Content Container -->
@@ -492,7 +492,7 @@
             <div class="feature-item">Premium Quality Products</div>
             <div class="feature-item">Competitive Pricing</div>
             <div class="feature-item">Safe & Welcoming Environment</div>
-            <div class="feature-item">Open 7 Days a Week</div>
+            <div class="feature-item">Open 5 Days a Week</div>
           </div>
         </div>
       </div>
@@ -514,8 +514,8 @@
       <div class="modal-body">
         <!-- Store Photo -->
         <div class="store-image">
-  <img src="img/IMG_2526.jpeg" alt="Store Front">
-</div>
+          <img src="img/IMG_1485.jpeg" alt="Store Front">
+        </div>
 
         <!-- Contact Information -->
         <div class="contact-info">
@@ -541,8 +541,8 @@
             </svg>
             <div class="contact-details">
               <h3>Business Hours</h3>
-              <p>Monday - Sunday</p>
-              <p style="font-weight: 600;">9:00 AM - 9:00 PM</p>
+              <p>Tuesday - Saturday</p>
+              <p style="font-weight: 600;">9:00 AM - 8:00 PM</p>
             </div>
           </div>
 
@@ -555,51 +555,77 @@
             <div class="contact-details">
               <h3>Phone</h3>
               <a href="tel:386-795-4226">(386) 795-4226</a>
+              <a href="tel:386-795-4226">(386) 275-9690</a>
             </div>
           </div>
-        </div>
 
-        <!-- Map -->
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.123456789!2d-81.3!3d29.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDAxJzEyLjAiTiA4McKwMTgnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
-            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Store Location">
-          </iframe>
+          <style>
+            .contact-item {
+              display: flex;
+              /* アイコンと詳細を横並びにする */
+              align-items: center;
+              /* アイコンと文字を縦方向に中央揃え */
+              gap: 10px;
+              /* アイコンとテキストの間隔 */
+            }
+
+            .contact-details a {
+              display: block;
+              /* 電話番号を縦に並べる */
+              margin-bottom: 5px;
+              /* 番号間のスペース */
+            }
+
+            .contact-icon {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+              /* アイコンのサイズを固定 */
+            }
+          </style>
+
+
+          <!-- Map -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.123456789!2d-81.3!3d29.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDAxJzEyLjAiTiA4McKwMTgnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Store Location">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    function verifyAge(isOfAge) {
-      if (isOfAge) {
-        document.getElementById('ageVerification').classList.add('hidden');
-        document.getElementById('mainContent').style.display = 'block';
-      } else {
-        window.location.href = 'https://www.google.com';
+    <script>
+      function verifyAge(isOfAge) {
+        if (isOfAge) {
+          document.getElementById('ageVerification').classList.add('hidden');
+          document.getElementById('mainContent').style.display = 'block';
+        } else {
+          window.location.href = 'https://www.google.com';
+        }
       }
-    }
 
-    function shopOnline() {
-      // Replace this URL with your actual point of sale terminal URL
-      window.open('https://your-pos-terminal-url.com', '_blank');
-    }
-
-    function showStoreInfo() {
-      document.getElementById('storeModal').classList.remove('hidden');
-    }
-
-    function closeStoreInfo() {
-      document.getElementById('storeModal').classList.add('hidden');
-    }
-
-    // Close modal when clicking outside
-    document.getElementById('storeModal').addEventListener('click', function (e) {
-      if (e.target === this) {
-        closeStoreInfo();
+      function shopOnline() {
+        // Replace this URL with your actual point of sale terminal URL
+        window.open('https://your-pos-terminal-url.com', '_blank');
       }
-    });
-  </script>
+
+      function showStoreInfo() {
+        document.getElementById('storeModal').classList.remove('hidden');
+      }
+
+      function closeStoreInfo() {
+        document.getElementById('storeModal').classList.add('hidden');
+      }
+
+      // Close modal when clicking outside
+      document.getElementById('storeModal').addEventListener('click', function (e) {
+        if (e.target === this) {
+          closeStoreInfo();
+        }
+      });
+    </script>
 </body>
 
 </html>
